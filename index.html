@@ -51,92 +51,96 @@
     <div
       class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg print:shadow-none print:p-0 print:!bg-white print:!text-black print-container"
     >
-      <header
-        class="flex flex-col md:flex-row print:flex-row items-center bg-secondary dark:bg-dark-secondary p-5 rounded-lg mb-2 print:mb-4 print:p-2 print:!bg-white"
-      >
-        <div class="flex-shrink-0 mb-5 md:mb-0 print:mb-0 md:mr-5 print:mr-5">
-          <img
-            src="foto-de-perfil.jpg"
-            alt="Foto de perfil de Daniel Gustavo Samborski"
-            class="w-32 max-w-[150px] min-w-[80px] print:w-28 rounded-full object-cover border-2 border-primary print:!border-black shadow"
-          />
-        </div>
-        <div class="flex-1 text-center md:text-left print:text-left space-y-2">
-          <h1
-            class="text-primary dark:text-dark-primary text-2xl md:text-3xl font-bold print:!text-black print:!mb-2"
-          >
-            Daniel Gustavo Samborski
-          </h1>
-          <p class="print:!text-black">
-            <i
-              class="fa-solid fa-envelope text-lightText dark:text-dark-lightText mr-2 print:!text-black"
-            ></i>
-            <a
-              href="mailto:danielgsamborski@gmail.com"
-              class="text-primary dark:text-dark-primary hover:underline print:!text-black"
-              >danielgsamborski@gmail.com</a
+      <div class="relative">
+        <div id="botones" class="absolute top-0 right-0 print:hidden">
+          <div class="flex gap-2">
+            <button
+              onclick="window.print()"
+              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+              title="Imprimir Currículum"
             >
-            |
-            <i
-              class="fa-solid fa-phone text-lightText dark:text-dark-lightText mx-2 print:!text-black"
-            ></i>
-            +54 3412294413
-          </p>
-          <p class="print:!text-black">
-            <i
-              class="fa-solid fa-globe text-lightText dark:text-dark-lightText mr-2 print:!text-black"
-            ></i>
+              <i class="fa-solid fa-print text-lg"></i>
+            </button>
             <a
-              href="https://samborski.github.io/curriculum"
+              href="Currículum de Daniel Gustavo Samborski.pdf?v=20250503"
               target="_blank"
-              class="text-primary dark:text-dark-primary hover:underline print:!text-black"
-              >samborski.github.io/curriculum</a
+              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+              title="Descargar PDF"
             >
-          </p>
-          <p class="print:!text-black">
-            <i
-              class="fa-solid fa-map-location-dot text-lightText dark:text-dark-lightText mr-2 print:!text-black"
-            ></i>
-            San Diego 1129, Villa Gob. Gálvez
-          </p>
-          <p class="print:!text-black">
-            <i
-              class="fa-solid fa-cake-candles text-lightText dark:text-dark-lightText mr-2 print:!text-black"
-            ></i>
-            18 de enero de 1973 |
-            <i
-              class="fa-solid fa-hashtag text-lightText dark:text-dark-lightText mx-2 print:!text-black"
-            ></i>
-            20-23113165-6
-          </p>
+              <i class="fa-solid fa-download text-lg"></i>
+            </a>
+            <button
+              onclick="document.documentElement.classList.toggle('dark')"
+              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+              title="Cambiar tema claro/oscuro"
+            >
+              <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+            </button>
+          </div>
         </div>
-      </header>
-
-      <div class="flex justify-end gap-2 mb-5 print:hidden">
-        <button
-          onclick="window.print()"
-          class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-          title="Imprimir Currículum"
+        <header
+          class="flex flex-col md:flex-row print:flex-row items-center bg-secondary dark:bg-dark-secondary p-5 rounded-lg mb-2 print:mb-4 print:p-2 print:!bg-white"
         >
-          <i class="fa-solid fa-print text-lg"></i>
-        </button>
-        <a
-          href="Currículum de Daniel Gustavo Samborski.pdf?v=20250503"
-          target="_blank"
-          class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-          title="Descargar PDF"
-        >
-          <i class="fa-solid fa-download text-lg"></i>
-        </a>
-        <button
-          onclick="document.documentElement.classList.toggle('dark')"
-          class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-          title="Cambiar tema claro/oscuro"
-        >
-          <i class="fa-solid fa-circle-half-stroke text-lg"></i>
-        </button>
+          <div class="flex-shrink-0 mb-5 md:mb-0 print:mb-0 md:mr-5 print:mr-5">
+            <img
+              src="foto-de-perfil.jpg"
+              alt="Foto de perfil de Daniel Gustavo Samborski"
+              class="w-32 max-w-[150px] min-w-[80px] print:w-28 rounded-full object-cover border-2 border-primary print:!border-black shadow"
+            />
+          </div>
+          <div
+            class="flex-1 text-center md:text-left print:text-left space-y-2"
+          >
+            <h1
+              class="text-primary dark:text-dark-primary text-2xl md:text-3xl font-bold print:!text-black print:!mb-2"
+            >
+              Daniel Gustavo Samborski
+            </h1>
+            <p class="print:!text-black">
+              <i
+                class="fa-solid fa-envelope text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+              ></i>
+              <a
+                href="mailto:danielgsamborski@gmail.com"
+                class="text-primary dark:text-dark-primary hover:underline print:!text-black"
+                >danielgsamborski@gmail.com</a
+              >
+              |
+              <i
+                class="fa-solid fa-phone text-lightText dark:text-dark-lightText mx-2 print:!text-black"
+              ></i>
+              +54 3412294413
+            </p>
+            <p class="print:!text-black">
+              <i
+                class="fa-solid fa-globe text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+              ></i>
+              <a
+                href="https://samborski.github.io/curriculum"
+                target="_blank"
+                class="text-primary dark:text-dark-primary hover:underline print:!text-black"
+                >samborski.github.io/curriculum</a
+              >
+            </p>
+            <p class="print:!text-black">
+              <i
+                class="fa-solid fa-map-location-dot text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+              ></i>
+              San Diego 1129, Villa Gob. Gálvez
+            </p>
+            <p class="print:!text-black">
+              <i
+                class="fa-solid fa-cake-candles text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+              ></i>
+              18 de enero de 1973 |
+              <i
+                class="fa-solid fa-hashtag text-lightText dark:text-dark-lightText mx-2 print:!text-black"
+              ></i>
+              20-23113165-6
+            </p>
+          </div>
+        </header>
       </div>
-
       <main class="flex flex-col md:flex-row print:flex-row gap-6 print:gap-4">
         <section
           class="flex-[2] bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 print:p-2 print:border-0 print:!bg-white print:!text-black"
