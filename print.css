@@ -2,14 +2,13 @@
   @page {
     size: A4;
     margin: 1cm;
-    /* Ocultar encabezados y pies de página */
-    margin-top: 0;
-    margin-bottom: 0;
   }
 
   body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    color: black !important;
+    background: white !important;
   }
 
   /* Asegurar que el contenido se mantenga en una página */
@@ -18,27 +17,32 @@
     break-inside: avoid;
   }
 
-  /* Ocultar encabezados y pies de página del navegador */
-  html {
-    margin: 0;
-    padding: 0;
+  /* Ajustes específicos para impresión */
+  a {
+    color: black !important;
+    text-decoration: none !important;
   }
 
-  /* Ocultar la URL y otros detalles de impresión */
-  @page {
-    size: A4;
-    margin: 0;
+  i {
+    color: black !important;
   }
 
-  @page :first {
-    margin-top: 0;
+  h1,
+  h2 {
+    color: black !important;
   }
 
-  @page :left {
-    margin-left: 0;
+  /* Líneas divisorias */
+  header {
+    border-bottom: 1px solid #000 !important;
+    background: none !important;
+    margin-bottom: 1em !important;
   }
 
-  @page :right {
-    margin-right: 0;
+  main > section + section {
+    border-left: 1px solid #000 !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
   }
 }
