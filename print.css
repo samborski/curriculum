@@ -11,22 +11,37 @@
     background: white !important;
   }
 
-  /* Asegurar que el contenido se mantenga en una página */
   .print-container {
     page-break-inside: avoid;
     break-inside: avoid;
   }
 
-  /* Ajustes específicos para impresión */
+  /* Asegurar que todos los textos sean negros */
+  *,
+  *::before,
+  *::after {
+    color: black !important;
+    border-color: black !important;
+    text-decoration-color: black !important;
+  }
+
+  /* Ajustes específicos para textos */
+  p,
+  span,
+  li,
+  strong,
+  b,
+  i {
+    color: black !important;
+  }
+
+  /* Ajustes para enlaces */
   a {
     color: black !important;
     text-decoration: none !important;
   }
 
-  i {
-    color: black !important;
-  }
-
+  /* Ajustes para encabezados */
   h1,
   h2 {
     color: black !important;
@@ -34,15 +49,22 @@
 
   /* Líneas divisorias */
   header {
-    border-bottom: 1px solid #000 !important;
+    border-bottom: 1px solid black !important;
     background: none !important;
     margin-bottom: 1em !important;
   }
 
   main > section + section {
-    border-left: 1px solid #000 !important;
+    border-left: 1px solid black !important;
     border-top: none !important;
     border-right: none !important;
     border-bottom: none !important;
+  }
+
+  /* Asegurar contraste */
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background: white !important;
   }
 }
