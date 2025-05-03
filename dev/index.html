@@ -30,35 +30,24 @@
         },
       };
     </script>
-    <style>
-      @media print {
-        @page {
-          size: A4;
-          margin: 0;
-        }
-        body {
-          -webkit-print-color-adjust: exact !important;
-          print-color-adjust: exact !important;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles/print.css" />
   </head>
 
-  <body class="bg-customBg text-customText font-sans print:text-sm">
+  <body class="bg-customBg text-customText font-sans print:text-[11px]">
     <div
-      class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg print:shadow-none"
+      class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg print:shadow-none print:p-0 print-container"
     >
       <header
-        class="flex flex-col md:flex-row items-center bg-secondary p-5 rounded-lg mb-5 print:mb-0 print:pb-0 print:bg-white"
+        class="flex flex-col md:flex-row print:flex-row items-center bg-secondary p-5 rounded-lg mb-5 print:mb-2 print:p-2 print:bg-white"
       >
-        <div class="flex-shrink-0 mb-5 md:mb-0 md:mr-5">
+        <div class="flex-shrink-0 mb-5 md:mb-0 print:mb-0 md:mr-5 print:mr-5">
           <img
             src="img/foto-de-perfil.jpg"
             alt="Foto de perfil de Daniel Gustavo Samborski"
-            class="w-32 max-w-[150px] min-w-[80px] rounded-full object-cover border-2 border-primary shadow"
+            class="w-32 max-w-[150px] min-w-[80px] print:w-28 rounded-full object-cover border-2 border-primary shadow"
           />
         </div>
-        <div class="flex-1 text-center md:text-left space-y-2">
+        <div class="flex-1 text-center md:text-left print:text-left space-y-2">
           <h1 class="text-primary text-2xl md:text-3xl font-bold">
             Daniel Gustavo Samborski
           </h1>
@@ -85,11 +74,9 @@
         </div>
       </header>
 
-      <main
-        class="flex flex-col md:flex-row gap-6 print:gap-2 print:mt-0 print:pt-0 print:scale-[0.95] print:origin-top"
-      >
+      <main class="flex flex-col md:flex-row print:flex-row gap-6 print:gap-3">
         <section
-          class="flex-[2] bg-white p-6 rounded-lg border border-gray-200 print:p-3 print:border-0"
+          class="flex-[2] bg-white p-6 rounded-lg border border-gray-200 print:p-2 print:border-0 print:flex-[2]"
         >
           <h2 class="text-primary text-xl font-bold mb-4">
             Perfil Profesional
@@ -190,7 +177,7 @@
         </section>
 
         <section
-          class="flex-1 bg-white p-6 rounded-lg border border-gray-200 print:p-3 print:border-0"
+          class="flex-1 bg-white p-6 rounded-lg border border-gray-200 print:p-2 print:border-0 print:flex-1"
         >
           <h2 class="text-primary text-xl font-bold mb-4">
             Habilidades Técnicas
