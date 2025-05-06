@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contacto - Daniel Gustavo Samborski" />
+    <meta
+      name="keywords"
+      content="contacto, Daniel Gustavo Samborski, desarrollador web, electricista"
+    />
+    <title>Contacto - Daniel Gustavo Samborski</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0077cc',
+              secondary: '#eaf2f8',
+              customText: '#333',
+              lightText: '#666',
+              customBg: '#f4f7fa',
+              dark: {
+                primary: '#60a5fa',
+                secondary: '#1f2937',
+                customText: '#e5e7eb',
+                lightText: '#9ca3af',
+                customBg: '#111827',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="print.css" />
+  </head>
+
+  <body
+    class="bg-customBg dark:bg-dark-customBg text-customText dark:text-dark-customText font-sans"
+  >
+    <div
+      class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+    >
+      <div class="relative">
+        <div id="botones" class="absolute top-0 right-0">
+          <div class="flex gap-2">
+            <a
+              href="Currículum de Daniel Gustavo Samborski.pdf?v=20250503"
+              target="_blank"
+              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+              title="Descargar PDF"
+            >
+              <i class="fa-solid fa-download text-lg"></i>
+            </a>
+            <button
+              onclick="document.documentElement.classList.toggle('dark')"
+              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+              title="Cambiar tema claro/oscuro"
+            >
+              <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+            </button>
+          </div>
+        </div>
+        <header
+          class="flex flex-col md:flex-row items-center bg-secondary dark:bg-dark-secondary p-5 rounded-lg mb-2"
+        >
+          <div class="flex-shrink-0 mb-5 md:mb-0 md:mr-5">
+            <img
+              src="foto-de-perfil.jpg"
+              alt="Foto de perfil de Daniel Gustavo Samborski"
+              class="w-32 max-w-[150px] min-w-[80px] rounded-full object-cover border-2 border-primary shadow"
+            />
+          </div>
+          <div class="flex-1 text-center md:text-left space-y-2">
+            <h1
+              class="text-primary dark:text-dark-primary text-2xl md:text-3xl font-bold"
+            >
+              Daniel Gustavo Samborski
+            </h1>
+            <p>
+              <i
+                class="fa-solid fa-envelope text-lightText dark:text-dark-lightText mr-2"
+              ></i>
+              <a
+                href="mailto:danielgsamborski@gmail.com"
+                class="text-primary dark:text-dark-primary hover:underline"
+                >danielgsamborski@gmail.com</a
+              >
+            </p>
+            <p>
+              <i
+                class="fa-solid fa-globe text-lightText dark:text-dark-lightText mr-2"
+              ></i>
+              <a
+                href="https://samborski.github.io/curriculum"
+                target="_blank"
+                class="text-primary dark:text-dark-primary hover:underline"
+                >samborski.github.io/curriculum</a
+              >
+            </p>
+          </div>
+        </header>
+      </div>
+
+      <!-- Navegación Principal -->
+      <nav class="mb-6 bg-secondary dark:bg-dark-secondary rounded-lg">
+        <ul
+          class="flex flex-wrap justify-center md:justify-start items-center p-4 gap-4"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="portfolio.html"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Portafolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="testimonios.html"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Testimonios</a
+            >
+          </li>
+          <li>
+            <a
+              href="contacto.html"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <style>
+        .active-nav-link {
+          background-color: #0077cc !important;
+          color: white !important;
+        }
+
+        .dark .active-nav-link {
+          background-color: #60a5fa !important;
+          color: white !important;
+        }
+      </style>
+
+      <!-- Contenido Principal -->
+      <main
+        class="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700"
+      >
+        <h2 class="text-primary dark:text-dark-primary text-2xl font-bold mb-6">
+          Contacto
+        </h2>
+
+        <div class="space-y-6">
+          <!-- Información de Contacto -->
+          <div class="bg-secondary dark:bg-dark-secondary rounded-lg p-6 mb-6">
+            <h3 class="text-lg font-semibold mb-4">Información de Contacto</h3>
+            <div class="space-y-3">
+              <p class="flex items-center gap-2">
+                <i
+                  class="fa-solid fa-phone text-primary dark:text-dark-primary"
+                ></i>
+                <span>+54 3412294413</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <i
+                  class="fa-solid fa-envelope text-primary dark:text-dark-primary"
+                ></i>
+                <a
+                  href="mailto:danielgsamborski@gmail.com"
+                  class="hover:underline"
+                  >danielgsamborski@gmail.com</a
+                >
+              </p>
+              <p class="flex items-center gap-2">
+                <i
+                  class="fa-solid fa-location-dot text-primary dark:text-dark-primary"
+                ></i>
+                <span>San Diego 1129, Villa Gob. Gálvez</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Formulario de Contacto -->
+          <div class="bg-secondary dark:bg-dark-secondary rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-4">Envíame un Mensaje</h3>
+            <!-- Aquí irá el formulario de Google Forms -->
+            <div
+              class="h-[500px] flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg"
+            >
+              <p class="text-lightText dark:text-dark-lightText">
+                Formulario de contacto próximamente...
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-6 p-6 bg-secondary dark:bg-dark-secondary rounded-lg">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div
+            class="text-sm text-customText dark:text-dark-customText mb-4 md:mb-0"
+          >
+            © 2025 Daniel Gustavo Samborski. Todos los derechos reservados.
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="Facebook"
+            >
+              <i class="fa-brands fa-facebook fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="X (Twitter)"
+            >
+              <i class="fa-brands fa-x fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="YouTube"
+            >
+              <i class="fa-brands fa-youtube fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github fa-fw text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Configuración del tema
+      const htmlElement = document.documentElement;
+
+      // Establecer tema claro por defecto si no hay tema guardado
+      if (!localStorage.theme) {
+        localStorage.theme = 'light';
+      }
+
+      // Aplicar el tema guardado
+      if (localStorage.theme === 'dark') {
+        htmlElement.classList.add('dark');
+      } else {
+        htmlElement.classList.remove('dark');
+      }
+
+      // Función para cambiar el tema
+      const toggleTheme = () => {
+        if (htmlElement.classList.contains('dark')) {
+          htmlElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          htmlElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        }
+      };
+
+      // Asignar la función al botón de tema
+      document.querySelector('[title="Cambiar tema claro/oscuro"]').onclick =
+        toggleTheme;
+
+      // Marcar el enlace activo en el menú de navegación
+      document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname;
+        const menuLinks = document.querySelectorAll('nav a');
+
+        menuLinks.forEach((link) => {
+          if (
+            currentPath.endsWith(link.getAttribute('href')) ||
+            (currentPath.endsWith('/') &&
+              link.getAttribute('href') === 'index.html')
+          ) {
+            link.classList.add('active-nav-link');
+          } else {
+            link.classList.remove('active-nav-link');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

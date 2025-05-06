@@ -16,7 +16,7 @@
     <title>Currículum de Daniel Gustavo Samborski</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,6 +54,7 @@
       <div class="relative">
         <div id="botones" class="absolute top-0 right-0 print:hidden">
           <div class="flex gap-2">
+            <!-- El botón de impresión solo aparece en el index -->
             <button
               onclick="window.print()"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
@@ -141,6 +142,80 @@
           </div>
         </header>
       </div>
+
+      <!-- Navegación Principal -->
+      <nav
+        class="mb-6 bg-secondary dark:bg-dark-secondary rounded-lg print:hidden"
+      >
+        <ul
+          class="flex flex-wrap justify-center md:justify-start items-center p-4 gap-4"
+        >
+          <li>
+            <a
+              href="index.html"
+              id="nav-inicio"
+              class="active-nav-link block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="portfolio.html"
+              id="nav-portfolio"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Portafolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="testimonios.html"
+              id="nav-testimonios"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Testimonios</a
+            >
+          </li>
+          <li>
+            <a
+              href="contacto.html"
+              id="nav-contacto"
+              class="block px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-primary dark:text-dark-primary hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-white"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <style>
+        .active-nav-link {
+          background-color: #0077cc !important;
+          color: white !important;
+        }
+
+        .dark .active-nav-link {
+          background-color: #60a5fa !important;
+          color: white !important;
+        }
+      </style>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const currentPath = window.location.pathname;
+          const menuLinks = document.querySelectorAll('nav a');
+
+          menuLinks.forEach((link) => {
+            if (
+              currentPath.endsWith(link.getAttribute('href')) ||
+              (currentPath.endsWith('/') &&
+                link.getAttribute('href') === 'index.html')
+            ) {
+              link.classList.add('active-nav-link');
+            } else {
+              link.classList.remove('active-nav-link');
+            }
+          });
+        });
+      </script>
+
       <main class="flex flex-col md:flex-row print:flex-row gap-6 print:gap-4">
         <section
           class="flex-[2] bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 print:p-2 print:border-0 print:!bg-white print:!text-black"
@@ -294,24 +369,74 @@
           </p>
         </section>
       </main>
+      <!-- Footer -->
+      <footer
+        class="mt-6 p-6 bg-secondary dark:bg-dark-secondary rounded-lg print:hidden"
+      >
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div
+            class="text-sm text-customText dark:text-dark-customText mb-4 md:mb-0"
+          >
+            © 2025 Daniel Gustavo Samborski. Todos los derechos reservados.
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="Facebook"
+            >
+              <i class="fa-brands fa-facebook fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="X (Twitter)"
+            >
+              <i class="fa-brands fa-x fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="YouTube"
+            >
+              <i class="fa-brands fa-youtube fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin fa-fw text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-primary dark:text-dark-primary hover:text-opacity-80 transition-colors"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github fa-fw text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script>
-      // Guardar la preferencia del tema en localStorage
+      // Configuración del tema
       const htmlElement = document.documentElement;
 
-      // Recuperar tema guardado o usar preferencia del sistema
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
+      // Establecer tema claro por defecto si no hay tema guardado
+      if (!localStorage.theme) {
+        localStorage.theme = 'light';
+      }
+
+      // Aplicar el tema guardado
+      if (localStorage.theme === 'dark') {
         htmlElement.classList.add('dark');
       } else {
         htmlElement.classList.remove('dark');
       }
 
-      // Actualizar localStorage cuando se cambia el tema
+      // Función para cambiar el tema
       const toggleTheme = () => {
         if (htmlElement.classList.contains('dark')) {
           htmlElement.classList.remove('dark');
@@ -325,6 +450,27 @@
       // Asignar la función al botón de tema
       document.querySelector('[title="Cambiar tema claro/oscuro"]').onclick =
         toggleTheme;
+
+      // Marcar el enlace activo en el menú de navegación
+      document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname;
+        const menuLinks = document.querySelectorAll('nav a');
+
+        menuLinks.forEach((link) => {
+          // Obtener la ruta del enlace
+          const linkPath = link.getAttribute('href');
+
+          // Comprobar si es la página actual
+          if (
+            currentPath.endsWith(linkPath) ||
+            (currentPath.endsWith('/') && linkPath === 'index.html')
+          ) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      });
     </script>
   </body>
 </html>
