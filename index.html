@@ -10,10 +10,7 @@
       content="currículum, Daniel Gustavo Samborski, desarrollador web, electricista"
     />
     <meta name="author" content="Daniel Gustavo Samborski" />
-    <!-- Metadatos para controlar la impresión -->
     <meta name="format-detection" content="telephone=no" />
-    <meta name="date" content="no" />
-    <meta name="url" content="no" />
     <meta name="robots" content="index, follow" />
     <title>Currículum de Daniel Gustavo Samborski</title>
     <link
@@ -86,10 +83,10 @@
   </head>
 
   <body
-    class="bg-customBg dark:bg-dark-customBg text-customText dark:text-dark-customText font-sans print:text-[11px] print:!bg-white print:!text-black"
+    class="bg-customBg dark:bg-dark-customBg text-customText dark:text-dark-customText font-sans print:text-[11px] print:bg-white print:text-black"
   >
     <div
-      class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg print:shadow-none print:p-0 print:!bg-white print:!text-black print-container"
+      class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg print:shadow-none print:p-0 print:bg-white print:text-black print-container"
     >
       <div class="relative">
         <div id="botones" class="absolute top-0 right-0 print:hidden">
@@ -98,14 +95,17 @@
               onclick="window.print()"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Imprimir Currículum"
+              aria-label="Imprimir Currículum"
             >
               <i class="fa-solid fa-print text-lg"></i>
             </button>
             <a
               href="Currículum de Daniel Gustavo Samborski.pdf?v=20250503"
               target="_blank"
+              rel="noopener"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Descargar PDF"
+              aria-label="Descargar PDF"
             >
               <i class="fa-solid fa-download text-lg"></i>
             </a>
@@ -114,6 +114,7 @@
               download
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Agregar a contactos"
+              aria-label="Agregar a contactos"
             >
               <i class="fa-solid fa-address-card text-lg"></i>
             </a>
@@ -121,72 +122,77 @@
               onclick="document.documentElement.classList.toggle('dark')"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Cambiar tema claro/oscuro"
+              aria-label="Cambiar tema claro/oscuro"
             >
               <i class="fa-solid fa-circle-half-stroke text-lg"></i>
             </button>
           </div>
         </div>
         <header
-          class="flex flex-col md:flex-row print:flex-row items-center bg-secondary dark:bg-dark-secondary p-5 rounded-lg mb-2 print:mb-4 print:p-2 print:!bg-white"
+          class="flex flex-col md:flex-row print:flex-row items-center bg-secondary dark:bg-dark-secondary p-5 rounded-lg mb-2 print:mb-4 print:p-2 print:bg-white"
         >
           <div class="flex-shrink-0 mb-5 md:mb-0 print:mb-0 md:mr-5 print:mr-5">
             <img
               src="foto-de-perfil.jpg"
               alt="Foto de perfil de Daniel Gustavo Samborski"
-              class="w-32 max-w-[150px] min-w-[80px] print:w-28 rounded-full object-cover border-2 border-primary print:!border-black shadow"
+              loading="lazy"
+              class="w-32 max-w-[150px] min-w-[80px] print:w-28 rounded-full object-cover border-2 border-primary print:border-black shadow"
             />
           </div>
           <div
             class="flex-1 text-center md:text-left print:text-left space-y-2"
           >
             <h1
-              class="text-primary dark:text-dark-primary text-2xl md:text-3xl font-bold print:!text-black print:!mb-2"
+              class="text-primary dark:text-dark-primary text-2xl md:text-3xl font-bold print:text-black print:mb-2"
             >
               Daniel Gustavo Samborski
             </h1>
-            <p class="print:!text-black">
+            <p class="print:text-black">
               <i
-                class="fa-solid fa-envelope text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+                class="fa-solid fa-envelope text-lightText dark:text-dark-lightText mr-2 print:text-black"
               ></i>
               <a
                 href="mailto:danielgsamborski@gmail.com"
-                class="text-primary dark:text-dark-primary hover:underline print:!text-black"
+                class="text-primary dark:text-dark-primary hover:underline print:text-black"
                 >danielgsamborski@gmail.com</a
               >
               |
               <i
-                class="fa-solid fa-phone text-lightText dark:text-dark-lightText mx-2 print:!text-black"
+                class="fa-solid fa-phone text-lightText dark:text-dark-lightText mx-2 print:text-black"
               ></i>
               +54 3412294413
               <a
                 href="https://api.whatsapp.com/send?phone=543412294413"
                 target="_blank"
+                rel="noopener"
                 class="text-primary dark:text-dark-primary hover:text-green-500 dark:hover:text-green-400 ml-2 print:hidden"
                 title="Iniciar chat en WhatsApp"
+                aria-label="Iniciar chat en WhatsApp"
               >
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
             </p>
-            <p class="print:!text-black">
+            <p class="print:text-black">
               <i
-                class="fa-solid fa-globe text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+                class="fa-solid fa-globe text-lightText dark:text-dark-lightText mr-2 print:text-black"
               ></i>
               <a
                 href="https://samborski.github.io/curriculum"
                 target="_blank"
-                class="text-primary dark:text-dark-primary hover:underline print:!text-black"
+                rel="noopener"
+                class="text-primary dark:text-dark-primary hover:underline print:text-black"
                 >samborski.github.io/curriculum</a
               >
             </p>
-            <p class="print:!text-black">
+            <p class="print:text-black">
               <i
-                class="fa-solid fa-map-location-dot text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+                class="fa-solid fa-map-location-dot text-lightText dark:text-dark-lightText mr-2 print:text-black"
               ></i>
               San Diego 1129, Villa Gob. Gálvez
             </p>
-            <p class="print:!text-black">
+            <p class="print:text-black">
               <i
-                class="fa-solid fa-cake-candles text-lightText dark:text-dark-lightText mr-2 print:!text-black"
+                class="fa-solid fa-cake-candles text-lightText dark:text-dark-lightText mr-2 print:text-black"
               ></i>
               18 de enero de 1973
             </p>
@@ -195,15 +201,15 @@
       </div>
       <main class="flex flex-col md:flex-row print:flex-row gap-6 print:gap-4">
         <section
-          class="flex-[2] bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 print:p-2 print:border-0 print:!bg-white print:!text-black"
+          class="flex-[2] bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 print:p-2 print:border-0 print:bg-white print:text-black"
         >
           <h2
-            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:!text-black"
+            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:text-black"
           >
             Perfil Profesional
           </h2>
           <p
-            class="mb-6 text-customText dark:text-dark-customText print:!text-black"
+            class="mb-6 text-customText dark:text-dark-customText print:text-black"
           >
             Técnico especializado en mantenimiento y reparación de PC,
             desarrollo de sitios web y electricidad domiciliaria.<br />
@@ -260,7 +266,6 @@
               <b>Operador de Computadoras</b> (Maxicomp Computación)
             </li>
           </ul>
-
           <h2
             class="text-primary dark:text-dark-primary text-xl font-bold mb-4"
           >
@@ -304,12 +309,11 @@
             </li>
           </ul>
         </section>
-
         <section
-          class="flex-1 bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 print:p-2 print:border-0 print:!bg-white print:!text-black"
+          class="flex-1 bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 print:p-2 print:border-0 print:bg-white print:text-black"
         >
           <h2
-            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:!text-black"
+            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:text-black"
           >
             Habilidades Técnicas
           </h2>
@@ -333,23 +337,98 @@
               <strong>Otros Conocimientos:</strong> Electricidad domiciliaria
             </li>
           </ul>
-
           <h2
-            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:!text-black"
+            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:text-black"
           >
             Disponibilidad
           </h2>
           <p
-            class="text-customText dark:text-dark-customText print:!text-black"
+            class="text-customText dark:text-dark-customText print:text-black mb-4"
           >
             Tiempo completo, ingreso inmediato
           </p>
+          <h2
+            class="text-primary dark:text-dark-primary text-xl font-bold mb-4 print:text-black"
+          >
+            ¡Conectemos!
+          </h2>
+          <ul class="space-y-2 mb-6">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/danielgsamborski"
+                target="_blank"
+                rel="noopener"
+                class="social-link p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+                aria-label="Perfil de LinkedIn"
+              >
+                <span class="icon-username">
+                  <i class="fa-brands fa-linkedin text-2xl"></i>
+                  <span class="username ml-2">danielgsamborski</span>
+                </span>
+                <span
+                  class="url text-sm text-lightText dark:text-dark-lightText block"
+                  >linkedin.com/in/danielgsamborski</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/samborski"
+                target="_blank"
+                rel="noopener"
+                class="social-link p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+                aria-label="Perfil de GitHub"
+              >
+                <span class="icon-username">
+                  <i class="fa-brands fa-github text-2xl"></i>
+                  <span class="username ml-2">samborski</span>
+                </span>
+                <span
+                  class="url text-sm text-lightText dark:text-dark-lightText block"
+                  >github.com/samborski</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/dgsamborski"
+                target="_blank"
+                rel="noopener"
+                class="social-link p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+                aria-label="Perfil de X"
+              >
+                <span class="icon-username">
+                  <i class="fa-brands fa-x-twitter text-2xl"></i>
+                  <span class="username ml-2">dgsamborski</span>
+                </span>
+                <span
+                  class="url text-sm text-lightText dark:text-dark-lightText block"
+                  >x.com/dgsamborski</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/danielgsamborski"
+                target="_blank"
+                rel="noopener"
+                class="social-link p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
+                aria-label="Perfil de Facebook"
+              >
+                <span class="icon-username">
+                  <i class="fa-brands fa-facebook text-2xl"></i>
+                  <span class="username ml-2">danielgsamborski</span>
+                </span>
+                <span
+                  class="url text-sm text-lightText dark:text-dark-lightText block"
+                  >facebook.com/danielgsamborski</span
+                >
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
-
-      <!-- Envolver las secciones de compartir y redes sociales en un contenedor flex -->
       <div class="w-full print:hidden mt-6 flex flex-col md:flex-row gap-6">
-        <!-- Sección Compartir Currículum -->
         <div class="flex-1 text-center">
           <h2
             class="text-primary dark:text-dark-primary text-xl font-bold mb-4"
@@ -357,115 +436,62 @@
             ¡Difunde mi Perfil!
           </h2>
           <div class="flex justify-center gap-4">
-            <!-- Facebook -->
             <a
               href="https://www.facebook.com/sharer/sharer.php?u=https://samborski.github.io/curriculum"
               target="_blank"
+              rel="noopener"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Compartir en Facebook"
+              aria-label="Compartir en Facebook"
             >
               <i class="fa-brands fa-facebook text-2xl"></i>
             </a>
-
-            <!-- Twitter/X -->
             <a
               href="https://x.com/intent/tweet?url=https://samborski.github.io/curriculum&text=Currículum de Daniel Gustavo Samborski - Desarrollador Web y Electricista"
               target="_blank"
+              rel="noopener"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Compartir en X"
+              aria-label="Compartir en X"
             >
               <i class="fa-brands fa-x-twitter text-2xl"></i>
             </a>
-
-            <!-- LinkedIn -->
             <a
               href="https://www.linkedin.com/shareArticle?mini=true&url=https://samborski.github.io/curriculum&title=Currículum de Daniel Gustavo Samborski&summary=Desarrollador Web y Electricista"
               target="_blank"
+              rel="noopener"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Compartir en LinkedIn"
+              aria-label="Compartir en LinkedIn"
             >
               <i class="fa-brands fa-linkedin text-2xl"></i>
             </a>
-
-            <!-- WhatsApp -->
             <a
               href="https://api.whatsapp.com/send?text=Currículum de Daniel Gustavo Samborski: https://samborski.github.io/curriculum"
               target="_blank"
+              rel="noopener"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Compartir por WhatsApp"
+              aria-label="Compartir por WhatsApp"
             >
               <i class="fa-brands fa-whatsapp text-2xl"></i>
             </a>
-
-            <!-- Telegram -->
             <a
               href="https://t.me/share/url?url=https://samborski.github.io/curriculum&text=Currículum de Daniel Gustavo Samborski"
               target="_blank"
+              rel="noopener"
               class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
               title="Compartir por Telegram"
+              aria-label="Compartir por Telegram"
             >
               <i class="fa-brands fa-telegram text-2xl"></i>
             </a>
           </div>
         </div>
-
-        <!-- Sección Redes Sociales -->
-        <div class="flex-1 text-center">
-          <h2
-            class="text-primary dark:text-dark-primary text-xl font-bold mb-4"
-          >
-            ¡Conectemos!
-          </h2>
-          <div class="flex justify-center gap-4">
-            <!-- LinkedIn -->
-            <a
-              href="https://www.linkedin.com/in/danielgsamborski"
-              target="_blank"
-              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-              title="Perfil de LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin text-2xl"></i>
-            </a>
-
-            <!-- GitHub -->
-            <a
-              href="https://github.com/samborski"
-              target="_blank"
-              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-              title="Perfil de GitHub"
-            >
-              <i class="fa-brands fa-github text-2xl"></i>
-            </a>
-
-            <!-- X -->
-            <a
-              href="https://x.com/dgsamborski"
-              target="_blank"
-              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-              title="Perfil de X"
-            >
-              <i class="fa-brands fa-x-twitter text-2xl"></i>
-            </a>
-
-            <!-- Facebook -->
-            <a
-              href="https://www.facebook.com/danielgsamborski"
-              target="_blank"
-              class="p-2 text-primary dark:text-dark-primary hover:bg-secondary dark:hover:bg-dark-secondary rounded-full transition-colors"
-              title="Perfil de Facebook"
-            >
-              <i class="fa-brands fa-facebook text-2xl"></i>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
-
     <script>
-      // Guardar la preferencia del tema en localStorage
       const htmlElement = document.documentElement;
-
-      // Recuperar tema guardado o usar preferencia del sistema
       if (
         localStorage.theme === 'dark' ||
         (!('theme' in localStorage) &&
@@ -475,8 +501,6 @@
       } else {
         htmlElement.classList.remove('dark');
       }
-
-      // Actualizar localStorage cuando se cambia el tema
       const toggleTheme = () => {
         if (htmlElement.classList.contains('dark')) {
           htmlElement.classList.remove('dark');
@@ -486,10 +510,12 @@
           localStorage.theme = 'dark';
         }
       };
-
-      // Asignar la función al botón de tema
-      document.querySelector('[title="Cambiar tema claro/oscuro"]').onclick =
-        toggleTheme;
+      const themeButton = document.querySelector(
+        '[title="Cambiar tema claro/oscuro"]'
+      );
+      if (themeButton) {
+        themeButton.onclick = toggleTheme;
+      }
     </script>
   </body>
 </html>
